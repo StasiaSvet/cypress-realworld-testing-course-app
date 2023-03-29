@@ -7,6 +7,7 @@ declare namespace Cypress {
      */
     window(options?: Partial<Loggable & Timeoutable>): Chainable<CustomWindow>
 
+    getByData(dataTestAttribute: string): Chainable<Element>
     getBySel(dataTestAttribute: string, args?: any): Chainable<Element>
     getBySelLike(
       dataTestPrefixAttribute: string,
