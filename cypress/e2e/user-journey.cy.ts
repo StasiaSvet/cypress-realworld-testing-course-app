@@ -15,8 +15,9 @@ describe("User Journey", () => {
         cy.location('pathname').should('eq', '/testing-your-first-application/setting-up-data-before-each-test')
         cy.getByData('challenge-answer-0').click()
         cy.getByData('challenge-answer-0').should('be.checked')
-        cy.getByData('next-lesson-button').should('exist').should('contain.text', 'Complete Course')
+        cy.getByData('next-lesson-button').should('exist').should('contain.text', 'Complete Course').click()
         cy.location('pathname').should('eq', '/')
+        cy.log('custom message')
 
     })
   })
